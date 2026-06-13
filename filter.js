@@ -201,6 +201,10 @@ const students = [
   },
 ];
 
-for (let i = 0; i < students.length; i++) {
-  console.log(`${i + 1}. ${students[i].name} (${students[i].department})`);
-}
+const oweFees = students
+  .filter((student) => {
+    return student.feesPaid === false;
+  })
+  .map((student) => student.name);
+
+console.log(oweFees);

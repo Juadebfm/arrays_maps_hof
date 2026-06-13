@@ -201,6 +201,12 @@ const students = [
   },
 ];
 
-for (let i = 0; i < students.length; i++) {
-  console.log(`${i + 1}. ${students[i].name} (${students[i].department})`);
-}
+const studentCards = students.map((student) => {
+  return {
+    title: student.name,
+    course: student.department,
+    standing: student.cgpa >= 4.0 ? "Distinction" : "Good standing",
+  };
+});
+
+console.log(studentCards);

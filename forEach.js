@@ -201,6 +201,8 @@ const students = [
   },
 ];
 
-for (let i = 0; i < students.length; i++) {
-  console.log(`${i + 1}. ${students[i].name} (${students[i].department})`);
-}
+students.forEach((student) => {
+  console.log(
+    `${student.name} is in ${student.level} level with CGPA ${student.cgpa}`,
+  );
+});
